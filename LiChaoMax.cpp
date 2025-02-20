@@ -38,7 +38,7 @@ struct LiChaoTree {
         long long ans = -inf;
         int x = i + sz;
         while (x > 0) {
-            ans = min(ans, t[x].eval(i));
+            ans = max(ans, t[x].eval(i));
             x >>= 1;
         }
         return ans;
